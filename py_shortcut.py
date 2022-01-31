@@ -38,5 +38,6 @@ class Turtle_short:
     for i in range(0,A):
       backward(1)
       left(a/A)
-      
-      
+   def disk(x,y,Pd,Pf):
+    for i in range(Pd,Pf):
+      circle(i)
