@@ -41,3 +41,35 @@ class Turtle_short:
    def disk(x,y,Pd,Pf):
     for i in range(Pd,Pf):
       circle(i)
+
+class SString(str):
+  def __init__(self, S):
+    self.S=S
+  def int(self, **karg):
+    try:
+      return int(self.S[karg["start"]:karg["end"]])
+    except:
+      try:
+        return int(self.S[0:karg["end"]])
+      except:
+        try:
+          return int(self.S[karg["start"]:len(self.S)])
+        except:
+          try:
+            return int(self.S)
+          except :
+            raise Exception("The strinbg isn't an int")
+  def float(self, **karg):
+    try:
+      return float(self.S[karg["start"]:karg["end"]])
+    except:
+      try:
+        return float(self.S[0:karg["end"]])
+      except:
+        try:
+          return float(self.S[karg["start"]:len(self.S)])
+        except:
+          try:
+            return float(self.S)
+          except :
+            raise Exception("The strinbg isn't an float")
