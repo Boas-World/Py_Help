@@ -73,3 +73,17 @@ class SString(str):
             return float(self.S)
           except :
             raise Exception("The strinbg isn't an float")
+  def Exception(self, **karg):
+    try:
+      return Exception(self.S[karg["start"]:karg["end"]])
+    except:
+      try:
+        return Exception(self.S[0:karg["end"]])
+      except:
+        try:
+          return Exception(self.S[karg["start"]:len(self.S)])
+        except:
+          try:
+            return Exception(self.S)
+          except :
+            raise Exception("The strinbg isn't an float")
