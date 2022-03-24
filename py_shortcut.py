@@ -58,7 +58,7 @@ class Sstring(str):
           try:
             return int(self.S)
           except :
-            raise Exception("The strinbg isn't an int")
+            raise Exception("The string isn't an int")
   def float(self, **karg):
     try:
       return float(self.S[karg["start"]:karg["end"]])
@@ -86,9 +86,70 @@ class Sstring(str):
           try:
             return Exception(self.S)
           except :
-            raise Exception("The strinbg isn't an float")
+            raise Exception("The string isn't an string/ Exception (NANI)")
 
 class Sint(int):
   def __init__(self,I):
     self.I=I
-    
+    self.S=str(I)
+  def float(self, **karg):
+    try:
+      return float(self.S[karg["start"]:karg["end"]])
+    except:
+      try:
+        return float(self.S[0:karg["end"]])
+      except:
+        try:
+          return float(self.S[karg["start"]:len(self.S)])
+        except:
+          try:
+            return float(self.S)
+          except :
+            raise Exception("The Int isn't an float (If you see that, your computer is possed by a demon")
+  def Exception(self, **karg):
+    try:
+      return Exception(self.S[karg["start"]:karg["end"]])
+    except:
+      try:
+        return Exception(self.S[0:karg["end"]])
+      except:
+        try:
+          return Exception(self.S[karg["start"]:len(self.S)])
+        except:
+          try:
+            return Exception(self.I)
+          except :
+            raise Exception("The Int isn't an string/ Exception (NANI)")
+
+class Sfloat(float):
+  def __init__(self,F):
+    self.F=F
+    self.S=str(self.F)
+  def int(self, **karg):
+    try:
+      return int(self.S[karg["start"]:karg["end"]])
+    except:
+      try:
+        return int(self.S[0:karg["end"]])
+      except:
+        try:
+          return int(self.S[karg["start"]:len(self.S)])
+        except:
+          try:
+            return int(self.S)
+          except :
+            raise Exception("The float isn't an int (??????)")
+  def Exception(self, **karg):
+    try:
+      return Exception(self.S[karg["start"]:karg["end"]])
+    except:
+      try:
+        return Exception(self.S[0:karg["end"]])
+      except:
+        try:
+          return Exception(self.S[karg["start"]:len(self.S)])
+        except:
+          try:
+            return Exception(self.F)
+          except :
+            raise Exception("The float isn't an string/ Exception (NANI)")
