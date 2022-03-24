@@ -153,3 +153,4 @@ class Sfloat(float):
             return Exception(self.F)
           except :
             raise Exception("The float isn't an string/ Exception (NANI)")
+
