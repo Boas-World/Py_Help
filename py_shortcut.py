@@ -42,7 +42,7 @@ class Turtle_short:
     for i in range(Pd,Pf):
       circle(i)
 
-class SString(str):
+class Sstring(str):
   def __init__(self, S):
     self.S=S
   def int(self, **karg):
@@ -72,7 +72,7 @@ class SString(str):
           try:
             return float(self.S)
           except :
-            raise Exception("The strinbg isn't an float")
+            raise Exception("The string isn't an float")
   def Exception(self, **karg):
     try:
       return Exception(self.S[karg["start"]:karg["end"]])
@@ -87,3 +87,8 @@ class SString(str):
             return Exception(self.S)
           except :
             raise Exception("The strinbg isn't an float")
+
+class Sint(int):
+  def __init__(self,I):
+    self.I=I
+    
