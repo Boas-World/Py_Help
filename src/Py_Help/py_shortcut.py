@@ -20,7 +20,7 @@ class Turtle_short:
   def __init__(self):
     try:
       from turtle import*
-     except:
+    except:
       pass
    def forigth(slef,A,a):
     for i in range(0,A):
